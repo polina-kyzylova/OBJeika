@@ -188,6 +188,18 @@ height: auto;
 	}
 }
 
+@media (min-width: 2999.98px) {
+	.header {
+		height: 200px;
+	}
+	.main_logo {
+		font-size: 65px;
+	}
+	.main_menu {
+		width: 70px;
+		height: 70px;
+	}
+}
 
 
 
@@ -365,6 +377,59 @@ body.lock {
 	}
 	.li_nav {
 		font-size: 20px;
+	}
+}
+
+@media (min-width: 2999.98px) {
+	.burger {
+		right: -100%;
+	  	height: 100vh;
+	  	width: 50%;
+	  	justify-content: space-between;
+  		flex-direction: row;
+	}
+	.burger_header {
+		height: 80%;
+		width: 10%;
+		display: flex;
+		margin: auto;
+	}
+	.burger_header_container {
+	    justify-content: center;
+	}
+	.burger_menu {
+		width: 65px;
+		height: 65px;
+	}
+	.burger_nav {
+		height: 80%;
+		width: 50%;
+		flex-wrap: wrap;
+		margin: auto;
+	}
+	.li_nav {
+		font-size: calc(10px + 15 * (100vw / 1000));
+	}
+	.li_nav a {
+		margin-left: 10%;
+	}
+	.burger_links {
+		height: 80%;
+		width: 40%;
+		margin: auto;
+	}
+	.burger_links_container {
+		width: auto;
+		height: auto;
+	    margin: auto 10%;
+	}
+	.li_link {
+		font-size: calc(12px + 10 * (100vw / 1000));
+		margin-bottom: 100px;
+	}
+	.burger_gp_logo, .burger_vk_logo {
+		height: 18%;
+		width: 18%;
 	}
 }
 
@@ -931,6 +996,34 @@ body.lock {
 	}
 }
 
+@media (min-width: 2999.98px) {
+	.advantages_block {
+		height: 150vh;
+	}
+	.advantages_container {
+		width: 80%;
+		height: 70%;
+		margin: auto;
+	}
+	.adv_voice_assist,.adv_attractions,
+	.adv_psychologist, .adv_awards {
+		height: 32vh;
+		line-height: 60px;
+	}
+	.adv_start_button {
+		width: 490px;
+		height: 120px;
+	}
+	.adv_btn_text {
+		font-size: 38px;
+	}
+	.adv_icons {
+		height: 10vh;
+		width: 10vh;
+		margin-top: -5vh;
+	}
+}
+
 @media (max-width: 1199.98px) and (orientation:landscape) {
 	.advantages_block {
 		height: 200vw;
@@ -1203,6 +1296,16 @@ body.lock {
 	}
 }
 
+@media (min-width: 2999.98px) {
+	.dev_button {
+		width: 430px;
+		height: 110px;
+	}
+	.dev_button_text {
+		font-size: 35px;
+	}
+}
+
 
 
 
@@ -1411,3 +1514,26 @@ body.lock {
 	}
 }
 
+@media (min-width: 2999.98px) {
+	.footer {
+		height: 600px;
+	}
+	.footer_container {
+		width: 70%;
+		height: 75%;
+	}
+	.f_link {
+		margin-right: 10%;
+		font-size: 40px;
+	}
+	.footer_icons {
+		grid-template-columns: 400px 400px;
+		grid-column-gap: 10%;
+	}
+	.footer_gp, .footer_vk {
+		font-size: 30px;
+	}
+	.footer_gp_text, .footer_vk_text {
+		margin: auto;
+	}
+}
