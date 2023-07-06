@@ -2,7 +2,7 @@
 /*---------------Обнуление---------------*/
 html, body {
 	height: 100%;
-	background-color: #613D24;
+	background-color: #000;
 }
 
 *,
@@ -98,7 +98,8 @@ height: auto;
 }	
 
 /*---Адаптивность---*/
-@media (width < 900px) {
+/*@media (width < 900px)*/
+@media (min-width: 600px) and (max-width: 899.98px) {
 	.header {
 		height: 70px;
 	}
@@ -111,7 +112,8 @@ height: auto;
 	}
 }
 
-@media (width < 600px) {
+/*@media (width < 600px)*/
+@media (min-width: 400px) and (max-width: 599.98px) {
 	.header {
 		height: 60px;
 	}
@@ -128,7 +130,8 @@ height: auto;
 	}
 }
 
-@media (width < 400px) {
+/*@media (width < 400px)*/
+@media (min-width: 330px) and (max-width: 399.98px) {
 	.header {
 		height: 50px;
 	}
@@ -145,7 +148,8 @@ height: auto;
 	}
 }
 
-@media (width < 330px) {
+/*@media (width < 330px)*/
+@media (max-width: 329.98px) {
 	.header {
 		height: 40px;
 	}
@@ -162,7 +166,7 @@ height: auto;
 	}
 }
 
-@media (width > 1800px) {
+@media (min-width: 1799.98px) {
 	.header {
 		height: 120px;
 	}
@@ -175,7 +179,7 @@ height: auto;
 	}
 }
 
-@media (width > 2100px) {
+@media (min-width: 2099.98px) {
 	.header {
 		height: 150px;
 	}
