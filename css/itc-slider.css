@@ -1,0 +1,298 @@
+/**
+ * ItcSlider
+ * @version 1.0.1
+ * @author https://github.com/itchief
+ * @copyright Alexander Maltsev 2020 - 2023
+ * @license MIT (https://github.com/itchief/ui-components/blob/master/LICENSE)
+ * @tutorial https://itchief.ru/javascript/slider
+ */
+
+.itc-slider {
+  position: relative;
+  height: 30%;
+  width: 70%;
+  margin: auto;
+}
+
+.itc-slider-wrapper {
+  overflow: hidden;
+  background-color: transparent;
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.itc-slider-items {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+
+  transition: transform 0.5s ease;
+  will-change: transform;
+}
+
+.itc-slider-transition-none {
+  transition: none;
+}
+
+.itc-slider-item {
+  user-select: none;
+  will-change: transform;
+
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
+  flex: 0 0 100%;
+  max-width: 100%;
+  position: relative;
+}
+
+.slider_first_icon, .slider_sec_icon {
+  margin-left: auto;
+  margin-right: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 32%;
+  cursor: pointer;
+}
+
+.slider_sec_text {
+  margin-left: 10px;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+
+  color: #fff;
+  font-size: 18px;
+  font-family: 'Play', regular;
+  cursor: pointer;
+}
+
+.slider_obj {
+  width: 32%;
+  height: 32%;
+  object-fit: contain;
+    
+  margin-top: auto;
+  margin-left: 0;
+  margin-right: auto;
+  margin-bottom: auto;
+  cursor: pointer;
+}
+
+/*Кнопки прокрутки*/
+.itc-slider-btn {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  text-align: center;
+  background: rgb(4 83 201 / 50%);
+  border-radius: 40px;
+  border: none;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.itc-slider-btn-hide {
+  display: none;
+}
+
+.itc-slider-btn-prev {
+  left: 0;
+}
+
+.itc-slider-btn-next {
+  right: 0;
+}
+
+.itc-slider-btn:hover,
+.itc-slider-btn:focus {
+  color: #fff;
+  text-decoration: none;
+  background: rgb(4 83 201 / 30%);
+  border-radius: 40px;
+  outline: 0;
+}
+
+.itc-slider-btn::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 40px;
+  background: transparent no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.itc-slider-btn-prev::before {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.itc-slider-btn-next::before {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+
+/*---Адаптивность---*/
+@media (max-width: 1399.98px) {
+  .itc-slider-btn {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (min-width: 1799.98px) {
+  .slider_obj {
+    width: 18vh;
+    height: 18vh;
+  }
+  .slider_sec_text {
+    font-size: 30px;
+  }
+  .itc-slider-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 40px;
+  }
+  .itc-slider-btn::before {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (min-width: 2099.98px) {
+  .itc-slider-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+  }
+  .itc-slider-btn::before {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (min-width: 2999.98px) {
+  .itc-slider {
+    height: 80%;
+    width: 90%;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    margin-top: 10%;
+    margin-left: 0;
+    margin-right: auto;
+    margin-bottom: auto;
+  }
+  .itc-slider-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+  .itc-slider-item {
+    display: flex;
+    flex-direction: row;
+  }
+  .slider_first_icon, .slider_sec_icon {
+    width: 16vh;
+    height: 16vh;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: 0;
+    margin-bottom: auto;
+  }
+  .slider_sec_text {
+    font-size: 30px;
+    text-align: center;
+
+    margin-top: auto;
+    margin-left: 0;
+    margin-right: auto;
+    margin-bottom: auto;
+  }
+  .slider_obj {
+    width: 16vh;
+    height: 16vh;
+    object-fit: contain;
+    
+    margin-top: auto;
+    margin-left: 0;
+    margin-right: auto;
+    margin-bottom: auto;
+  }
+  .itc-slider-btn {
+    width: 70px;
+    height: 70px;
+    border-radius: 60px;
+  }
+  .itc-slider-btn::before {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 1024.98px) and (orientation:landscape) {
+  .itc-slider {
+    height: 80%;
+    width: 90%;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    margin-top: 10%;
+    margin-left: 0;
+    margin-right: auto;
+    margin-bottom: auto;
+  }
+  .itc-slider-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+  .itc-slider-item {
+    display: flex;
+    flex-direction: row;
+  }
+  .slider_first_icon, .slider_sec_icon {
+    width: 25vh;
+    height: 25vh;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: 0;
+    margin-bottom: auto;
+  }
+  .slider_sec_text {
+    font-size: 15px;
+    text-align: center;
+
+    margin-top: auto;
+    margin-left: 0;
+    margin-right: auto;
+    margin-bottom: auto;
+  }
+  .slider_obj {
+    width: 25vh;
+    height: 25vh;
+    object-fit: contain;
+    
+    margin-top: auto;
+    margin-left: 0;
+    margin-right: auto;
+    margin-bottom: auto;
+  }
+  .itc-slider-btn {
+    width: 30px;
+    height: 30px;
+  }
+}

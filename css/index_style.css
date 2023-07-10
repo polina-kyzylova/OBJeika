@@ -2,7 +2,8 @@
 /*---------------Обнуление---------------*/
 html, body {
 	height: 100%;
-	background-color: #000;
+	/*background-color: #000;*/
+	background-color: #000D32;
 }
 
 *,
@@ -35,13 +36,14 @@ a:active {
   text-decoration: none;
 }
 
-::-webkit-scrollbar{
-width: 15px;
-height: auto;
+::-webkit-scrollbar {
+	width: 10px;
+	height: auto;
 }
 
 ::-webkit-scrollbar-thumb {
     background: #0B1D43;
+    border-radius: 100px;
 }
 
 ::-webkit-scrollbar-track {
@@ -58,10 +60,11 @@ height: auto;
     top: 0;
     left: 0;
     z-index: 100;
-	height: 100px;
+	height: 70px;
 
-	background-color: transparent;
+	background-color: #000D32;
 	position: fixed;
+
 	display: flex;
 	justify-content: space-between;
 }
@@ -75,7 +78,7 @@ height: auto;
 
 .main_logo {
 	color: #fff;
-	font-size: 35px;
+	font-size: 28px;
 	font-family: 'Squada One', regular;
 	cursor: pointer;
 	margin-top: auto;
@@ -83,8 +86,10 @@ height: auto;
 }
 
 .main_menu {
-	width: 42px;
-	height: 42px;
+	width: 32px;
+	height: 32px;
+	margin: auto 0;
+
 	cursor: pointer;
 	transition: transform 0.4s;
 }
@@ -94,7 +99,8 @@ height: auto;
 }
 
 .span {
-	color: #F34E40;
+	/*color: #66C7B0;*/
+	color: #FF5128;
 }	
 
 /*---Адаптивность---*/
@@ -113,14 +119,11 @@ height: auto;
 
 @media (min-width: 400px) and (max-width: 599.98px) {
 	.header {
-		height: 60px;
+		height: 50px;
 	}
 	.main_logo {
 		font-size: 20px;
 		line-height: 18px;
-	}
-	.span {
-		display: block;
 	}
 	.main_menu {
 		width: 27px;
@@ -136,9 +139,6 @@ height: auto;
 		font-size: 18px;
 		line-height: 16px;
 	}
-	.span {
-		display: block;
-	}
 	.main_menu {
 		width: 25px;
 		height: 25px;
@@ -153,12 +153,21 @@ height: auto;
 		font-size: 14px;
 		line-height: 12px;
 	}
-	.span {
-		display: block;
-	}
 	.main_menu {
 		width: 18px;
 		height: 18px;
+	}
+}
+
+@media (max-width: 1024.98px) and (orientation:landscape) {
+	.header {
+		height: 60px;
+	}
+}
+
+@media (max-width: 599.98px) and (orientation:landscape) {
+	.header {
+		height: 50px;
 	}
 }
 
@@ -209,7 +218,8 @@ height: auto;
 	right: -100%;
   	background-color: #000D32;
   	height: 100vh;
-  	width: 420px;
+  	/*width: 420px;*/
+  	width: 40%;
 
   	display: flex;
   	justify-content: space-between;
@@ -217,6 +227,7 @@ height: auto;
 
     position: fixed;
   	text-align: left;
+  	z-index: 111;
 
   	overflow: auto;
   	transition: all 0.5s ease-in-out;
@@ -246,7 +257,7 @@ body.lock {
 
 /*Шапка бургера*/
 .burger_header {
-	height: 57px;
+	height: 70px;
 	width: 100%;
 	display: flex;
 }
@@ -259,8 +270,9 @@ body.lock {
 }
 
 .burger_menu {
-	width: 27px;
-	height: 27px;
+	width: 32px;
+	height: 32px;
+	margin: auto 0;
 	cursor: pointer;
 	transition: transform 0.4s;
 }
@@ -380,17 +392,64 @@ body.lock {
 	}
 }
 
+@media (min-width: 1799.98px) {
+	.burger_header {
+		height: 120px;
+	}
+	.burger_menu {
+		width: 50px;
+		height: 50px;
+		margin: auto 0;
+	}
+	.li_nav {
+		font-size: 35px;
+	}
+	.li_link {
+		font-size: calc(10px + 5 * (100vw / 1000));
+	}
+	.burger_gp_logo, .burger_vk_logo {
+		height: 12%;
+		width: 12%;
+	}
+}
+
+@media (min-width: 2099.98px) {
+	.burger_header {
+		height: 150px;
+	}
+	.burger_menu {
+		width: 55px;
+		height: 55px;
+		margin: auto 0;
+	}
+	.li_nav {
+		font-size: 40px;
+	}
+	.li_link {
+		font-size: calc(10px + 10 * (100vw / 1000));
+	}
+	.burger_gp_logo, .burger_vk_logo {
+		height: 15%;
+		width: 15%;
+	}
+}
+
 @media (min-width: 2999.98px) {
 	.burger {
-		right: -100%;
+		right: -50%;
 	  	height: 100vh;
 	  	width: 50%;
-	  	justify-content: space-between;
-  		flex-direction: row;
+  		display: grid;
+  		grid-template-columns: 10% 40% 50%;
+  		grid-auto-rows: 60% 40%;
 	}
 	.burger_header {
-		height: 80%;
-		width: 10%;
+		height: 100%;
+		grid-column-start: 1;
+    	grid-column-end: 2;
+    	grid-row-start: 1;
+        grid-row-end: 3;
+
 		display: flex;
 		margin: auto;
 	}
@@ -398,12 +457,17 @@ body.lock {
 	    justify-content: center;
 	}
 	.burger_menu {
-		width: 65px;
-		height: 65px;
+		width: 70px;
+		height: 70px;
+		margin: auto;
 	}
 	.burger_nav {
 		height: 80%;
-		width: 50%;
+		grid-column-start: 2;
+    	grid-column-end: 3;
+    	grid-row-start: 1;
+        grid-row-end: 3;
+
 		flex-wrap: wrap;
 		margin: auto;
 	}
@@ -414,18 +478,24 @@ body.lock {
 		margin-left: 10%;
 	}
 	.burger_links {
-		height: 80%;
-		width: 40%;
-		margin: auto;
+		height: auto;
+		grid-column-start: 3;
+    	grid-column-end: 4;
+    	grid-row-start: 2;
+        grid-row-end: 3;
+		display: flex;
+
+		margin-top: 0;
+    	margin-left: 0;
+    	margin-right: auto;
+    	margin-bottom: auto;
 	}
 	.burger_links_container {
-		width: auto;
-		height: auto;
-	    margin: auto 10%;
+	    justify-content: center;
+	    margin: auto;
 	}
 	.li_link {
 		font-size: calc(12px + 10 * (100vw / 1000));
-		margin-bottom: 100px;
 	}
 	.burger_gp_logo, .burger_vk_logo {
 		height: 18%;
@@ -438,12 +508,17 @@ body.lock {
 		right: -100%;
 	  	height: 100vh;
 	  	width: 100%;
-	  	justify-content: space-between;
-  		flex-direction: row;
+  		display: grid;
+  		grid-template-columns: 10% 40% 50%;
+  		grid-auto-rows: 60% 40%;
 	}
 	.burger_header {
 		height: 80%;
-		width: 10%;
+		grid-column-start: 1;
+    	grid-column-end: 2;
+    	grid-row-start: 1;
+        grid-row-end: 3;
+
 		display: flex;
 		margin: auto;
 	}
@@ -452,7 +527,11 @@ body.lock {
 	}
 	.burger_nav {
 		height: 80%;
-		width: 60%;
+		grid-column-start: 2;
+    	grid-column-end: 3;
+    	grid-row-start: 1;
+        grid-row-end: 3;
+
 		flex-wrap: wrap;
 		margin: auto;
 	}
@@ -463,14 +542,21 @@ body.lock {
 		margin-left: 10%;
 	}
 	.burger_links {
-		height: 80%;
-		width: 30%;
-		margin: auto;
+		height: auto;
+		grid-column-start: 3;
+    	grid-column-end: 4;
+    	grid-row-start: 2;
+        grid-row-end: 3;
+		display: flex;
+
+		margin-top: auto;
+    	margin-left: 0;
+    	margin-right: auto;
+    	margin-bottom: 10%;
 	}
 	.burger_links_container {
-		width: auto;
-		height: auto;
-	    margin: auto 10%;
+	    justify-content: center;
+	    margin: auto;
 	}
 	.li_link {
 		font-size: calc(10px + 10 * (100vw / 1000));
@@ -493,6 +579,7 @@ body.lock {
 	width: 100%;
 	top: 0;
 	position: relative;
+	margin-top: 70px;                       
 	margin-bottom: -6%;
 	z-index: 1;
 }
@@ -501,6 +588,103 @@ body.lock {
 	width: 100%;
 	height: 100%;
 	position: absolute;
+}
+
+/*---Адаптивность---*/
+@media (min-width: 600px) and (max-width: 899.98px) {
+	.banner {
+		height: 90vw;
+		margin-top: 70px;                
+	}
+	.main_banner {   
+	    object-fit: cover;
+	    object-position: 90% center;
+	}
+}
+
+@media (min-width: 400px) and (max-width: 599.98px) {
+	.banner {
+		height: 90vw;
+		margin-top: 50px;               
+	}
+	.main_banner { 
+	    object-fit: cover;
+	    object-position: 90% center;
+	}
+}
+
+@media (min-width: 330px) and (max-width: 399.98px) {
+	.banner {
+		height: 90vw;
+		margin-top: 50px;                
+	}
+	.main_banner {
+	    object-fit: cover;
+	    object-position: 90% center;
+	}
+}
+
+@media (max-width: 329.98px) {
+	.banner {
+		height: 90vw;
+		margin-top: 40px;                
+	}
+	.main_banner {
+	    object-fit: cover;
+	    object-position: 90% center;
+	}
+}
+
+@media (max-width: 1024.98px) and (orientation:landscape) {
+	.banner {
+		height: 52vw;
+		width: 100%;
+		top: 0;
+		position: relative;
+		margin-top: 60px;                       
+		margin-bottom: -6%;
+		z-index: 1;
+	}
+	.main_banner {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+	}
+}
+
+@media (max-width: 599.98px) and (orientation:landscape) {
+	.banner {
+		height: 52vw;
+		width: 100%;
+		top: 0;
+		position: relative;
+		margin-top: 50px;                       
+		margin-bottom: -6%;
+		z-index: 1;
+	}
+	.main_banner {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+	}
+}
+
+@media (min-width: 1799.98px) {
+	.banner {
+		margin-top: 120px;                
+	}
+}
+
+@media (min-width: 2099.98px) {
+	.banner {
+		margin-top: 150px;                
+	}
+}
+
+@media (min-width: 2999.98px) {
+	.banner {
+		margin-top: 200px;                
+	}
 }
 
 
@@ -975,7 +1159,7 @@ body.lock {
 
 @media (min-width: 1799.98px) {
 	.advantages_block {
-		height: 120vh;
+		height: 180vh;
 	}
 	.advantages_container {
 		width: 80%;
@@ -984,7 +1168,7 @@ body.lock {
 	}
 	.adv_voice_assist,.adv_attractions,
 	.adv_psychologist, .adv_awards {
-		height: 25vh;
+		height: 40vh;
 		line-height: 60px;
 	}
 	.adv_start_button {
