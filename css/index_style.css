@@ -2,7 +2,6 @@
 /*---------------Обнуление---------------*/
 html, body {
 	height: 100%;
-	/*background-color: #000;*/
 	background-color: #000D32;
 }
 
@@ -24,11 +23,7 @@ a:link {
   text-decoration: none;
 }
 a:visited {
-  color: #fff; 
-  text-decoration: none;
-}
-a:hover {
-  color: #fff; 
+  
   text-decoration: none;
 }
 a:active {
@@ -50,8 +45,13 @@ a:active {
     background: #fff;
 }
 
+#f_link_text {
+   color: #fff;
+}
 
-
+#link {
+	color: #fff;
+}
 
 
 /*---------------Шапка---------------*/
@@ -199,7 +199,7 @@ a:active {
 
 @media (min-width: 2999.98px) {
 	.header {
-		height: 200px;
+		height: 170px;
 	}
 	.main_logo {
 		font-size: 65px;
@@ -393,63 +393,16 @@ body.lock {
 }
 
 @media (min-width: 1799.98px) {
-	.burger_header {
-		height: 120px;
-	}
-	.burger_menu {
-		width: 50px;
-		height: 50px;
-		margin: auto 0;
-	}
-	.li_nav {
-		font-size: 35px;
-	}
-	.li_link {
-		font-size: calc(10px + 5 * (100vw / 1000));
-	}
-	.burger_gp_logo, .burger_vk_logo {
-		height: 12%;
-		width: 12%;
-	}
-}
-
-@media (min-width: 2099.98px) {
-	.burger_header {
-		height: 150px;
-	}
-	.burger_menu {
-		width: 55px;
-		height: 55px;
-		margin: auto 0;
-	}
-	.li_nav {
-		font-size: 40px;
-	}
-	.li_link {
-		font-size: calc(10px + 10 * (100vw / 1000));
-	}
-	.burger_gp_logo, .burger_vk_logo {
-		height: 15%;
-		width: 15%;
-	}
-}
-
-@media (min-width: 2999.98px) {
 	.burger {
-		right: -50%;
+		right: -100%;
 	  	height: 100vh;
 	  	width: 50%;
-  		display: grid;
-  		grid-template-columns: 10% 40% 50%;
-  		grid-auto-rows: 60% 40%;
+	  	justify-content: space-between;
+  		flex-direction: row;
 	}
 	.burger_header {
-		height: 100%;
-		grid-column-start: 1;
-    	grid-column-end: 2;
-    	grid-row-start: 1;
-        grid-row-end: 3;
-
+		height: 80%;
+		width: 10%;
 		display: flex;
 		margin: auto;
 	}
@@ -457,17 +410,12 @@ body.lock {
 	    justify-content: center;
 	}
 	.burger_menu {
-		width: 70px;
-		height: 70px;
-		margin: auto;
+		width: 65px;
+		height: 65px;
 	}
 	.burger_nav {
 		height: 80%;
-		grid-column-start: 2;
-    	grid-column-end: 3;
-    	grid-row-start: 1;
-        grid-row-end: 3;
-
+		width: 50%;
 		flex-wrap: wrap;
 		margin: auto;
 	}
@@ -478,24 +426,18 @@ body.lock {
 		margin-left: 10%;
 	}
 	.burger_links {
-		height: auto;
-		grid-column-start: 3;
-    	grid-column-end: 4;
-    	grid-row-start: 2;
-        grid-row-end: 3;
-		display: flex;
-
-		margin-top: 0;
-    	margin-left: 0;
-    	margin-right: auto;
-    	margin-bottom: auto;
+		height: 80%;
+		width: 40%;
+		margin: auto;
 	}
 	.burger_links_container {
-	    justify-content: center;
-	    margin: auto;
+		width: auto;
+		height: auto;
+	    margin: auto 10%;
 	}
 	.li_link {
 		font-size: calc(12px + 10 * (100vw / 1000));
+		margin-bottom: 100px;
 	}
 	.burger_gp_logo, .burger_vk_logo {
 		height: 18%;
@@ -508,17 +450,12 @@ body.lock {
 		right: -100%;
 	  	height: 100vh;
 	  	width: 100%;
-  		display: grid;
-  		grid-template-columns: 10% 40% 50%;
-  		grid-auto-rows: 60% 40%;
+	  	justify-content: space-between;
+  		flex-direction: row;
 	}
 	.burger_header {
 		height: 80%;
-		grid-column-start: 1;
-    	grid-column-end: 2;
-    	grid-row-start: 1;
-        grid-row-end: 3;
-
+		width: 10%;
 		display: flex;
 		margin: auto;
 	}
@@ -527,11 +464,7 @@ body.lock {
 	}
 	.burger_nav {
 		height: 80%;
-		grid-column-start: 2;
-    	grid-column-end: 3;
-    	grid-row-start: 1;
-        grid-row-end: 3;
-
+		width: 60%;
 		flex-wrap: wrap;
 		margin: auto;
 	}
@@ -542,26 +475,20 @@ body.lock {
 		margin-left: 10%;
 	}
 	.burger_links {
-		height: auto;
-		grid-column-start: 3;
-    	grid-column-end: 4;
-    	grid-row-start: 2;
-        grid-row-end: 3;
-		display: flex;
-
-		margin-top: auto;
-    	margin-left: 0;
-    	margin-right: auto;
-    	margin-bottom: 10%;
+		height: 80%;
+		width: 30%;
+		margin: auto;
 	}
 	.burger_links_container {
-	    justify-content: center;
-	    margin: auto;
+		width: auto;
+		height: auto;
+	    margin: auto 10%;
 	}
 	.li_link {
 		font-size: calc(10px + 10 * (100vw / 1000));
 	}
 }
+
 
 
 
@@ -683,7 +610,7 @@ body.lock {
 
 @media (min-width: 2999.98px) {
 	.banner {
-		margin-top: 200px;                
+		margin-top: 170px;                
 	}
 }
 
@@ -848,7 +775,7 @@ body.lock {
 
 /*---------------Второй блок (Достоинства)---------------*/
 .advantages_block {
-	height: 100vw;
+	height: 90vw;
 	width: 100%;
 	display: flex;
 
@@ -870,7 +797,6 @@ body.lock {
 	margin: auto;
 }
 
-/*Карточки*/
 .adv_first_line, .adv_second_line {
 	display: flex;
 	justify-content: space-around;
@@ -912,40 +838,6 @@ body.lock {
 	margin-right: auto;
 }
 
-/*Кнопка*/
-.adv_button {
-	display: flex;
-	justify-content: center;
-}
-
-.adv_start_button {
-	width: 350px;
-	height: 80px;
-	background-color: #000D32;
-	border-radius: 30px;
-	margin-top: -5%;
-
-	display: flex;
-	justify-content: center;
-	flex-direction: row;
-	cursor: pointer;
-    transition: background-color 0.4s, transform 0.4s;
-}
-
-.adv_start_button:hover {
-	transform: scale(1.1);
-	background-color: #0453C9;
-}
-
-.adv_btn_text {
-	color: #fff;
-	font-size: calc(16px + 9 * (100vw / 1410));;
-	font-family: 'Russo One', light;
-	letter-spacing: 2px;
-	text-align: center;
-	margin: auto;
-}
-
 /*---Адаптивность---*/
 @media (min-width: 900px) and (max-width: 1199.98px) {
 	.advantages_block {
@@ -953,7 +845,7 @@ body.lock {
 	}
 	.advantages_container {
 		width: 80%;
-		height: 82%;
+		height: 95%;
 		margin: 5% auto;
 		display: block;
 	}
@@ -968,16 +860,6 @@ body.lock {
 		width: 100%;
 		margin: auto;
 		height: 40%;
-	}
-	.adv_button {
-		height: 10%;
-		margin: auto;
-		justify-content: center;
-	}
-	.adv_start_button {
-		height: 80%;
-		width: 50%;
-		margin: auto;
 	}
 }
 
@@ -988,7 +870,7 @@ body.lock {
 	}
 	.advantages_container {
 		width: 80%;
-		height: 82%;
+		height: 95%;
 		margin: 5% auto;
 		display: block;
 	}
@@ -1004,27 +886,17 @@ body.lock {
 		margin: auto;
 		height: 40%;
 	}
-	.adv_button {
-		height: 10%;
-		margin: auto;
-		justify-content: center;
-	}
-	.adv_start_button {
-		height: 80%;
-		width: 50%;
-		margin: auto;
-	}
 }
 
 @media (min-width: 400px) and (max-width: 599.98px) {
 	.advantages_block {
-		height: 160vh;
+		height: 130vh;
 		border-radius: 0 30px 0 0;
 	}
 	.advantages_container {
 		margin: 10% auto;
 		width: 80%;
-		height: 82%;
+		height: 90%;
 		display: block;
 	}
 	.adv_first_line, .adv_second_line {
@@ -1038,11 +910,6 @@ body.lock {
 		width: 100%;
 		margin: auto;
 		height: 40%;
-	}
-	.adv_button {
-		height: 10%;
-		margin: auto;
-		justify-content: center;
 	}
 	.adv_text {
 		font-size: calc(10px + 11 * (100vw / 600));
@@ -1054,23 +921,17 @@ body.lock {
 		width: 12vw;
 		margin-top: -6vw;
 	}
-	.adv_start_button {
-		height: 60%;
-		width: 60%;
-		margin-top: auto;
-		margin-bottom: 0;
-	}
 }
 
 @media (min-width: 330px) and (max-width: 399.98px) {
 	.advantages_block {
-		height: 180vh;
+		height: 150vh;
 		border-radius: 0 30px 0 0;
 	}
 	.advantages_container {
 		margin: 10% auto;
 		width: 80%;
-		height: 85%;
+		height: 100%;
 		display: block;
 	}
 	.adv_first_line, .adv_second_line {
@@ -1085,11 +946,6 @@ body.lock {
 		margin: auto;
 		height: 40%;
 	}
-	.adv_button {
-		height: 10%;
-		margin: auto;
-		justify-content: center;
-	}
 	.adv_text {
 		font-size: calc(10px + 12 * (100vw / 500));
 		line-height: calc(16px + 12 * (100vw / 500));
@@ -1100,23 +956,17 @@ body.lock {
 		width: 12vw;
 		margin-top: -6vw;
 	}
-	.adv_start_button {
-		height: 60%;
-		width: 60%;
-		margin-top: auto;
-		margin-bottom: 0;
-	}
 }
 
 @media (max-width: 329.98px) {
 	.advantages_block {
-		height: 160vh;
+		height: 140vh;
 		border-radius: 0 30px 0 0;
 	}
 	.advantages_container {
 		margin: 10% auto;
 		width: 80%;
-		height: 82%;
+		height: 100%;
 		display: block;
 	}
 	.adv_first_line, .adv_second_line {
@@ -1159,11 +1009,11 @@ body.lock {
 
 @media (min-width: 1799.98px) {
 	.advantages_block {
-		height: 180vh;
+		height: 150vh;
 	}
 	.advantages_container {
 		width: 80%;
-		height: 70%;
+		height: 75%;
 		margin: auto;
 	}
 	.adv_voice_assist,.adv_attractions,
@@ -1171,18 +1021,11 @@ body.lock {
 		height: 40vh;
 		line-height: 60px;
 	}
-	.adv_start_button {
-		width: 420px;
-		height: 95px;
-	}
-	.adv_btn_text {
-		font-size: 32px;
-	}
 }
 
 @media (min-width: 2999.98px) {
 	.advantages_block {
-		height: 150vh;
+		height: 130vh;
 	}
 	.advantages_container {
 		width: 80%;
@@ -1281,7 +1124,7 @@ body.lock {
 
 
 
-/*---------------Третий блок (О нас)---------------*/
+/*---------------Третий блок (Приложения)---------------*/
 .developers_block {
 	height: 40vw;
 	width: 100%;
@@ -1293,20 +1136,13 @@ body.lock {
 }
 
 .developers_container {
-	width: 60%;
-	height: 60%;
+	width: 80%;
+	height: 90%;
 	display: flex;
 	justify-content: space-around;
 	flex-direction: column;
-
-	left: 0;
-	top: 0;
-
-	margin-left: auto;
-	margin-top: 3%;
-	margin-bottom: auto;
-	margin-right: 15%;
-	text-align: right;
+	margin: auto;
+	text-align: center;
 }
 
 .dev_h2 {
@@ -1316,41 +1152,6 @@ body.lock {
 	letter-spacing: 2px;
 }
 
-.dev_button {
-	color: #fff;
-	background-color: #000D32;
-
-	width: 230px;
-	height: 65px;
-	border-radius: 30px;
-    padding: 10px;
-
-    display: flex;
-	justify-content: center;
-	flex-direction: row;
-
-    margin-right: 0;
-	margin-left: auto;
-
-	cursor: pointer;
-	position: relative;
-    transition: background-color 0.4s, transform 0.4s;
-}
-
-.dev_button:hover {
-	transform: scale(1.1);
-	background-color: #0453C9;
-}
-
-.dev_button_text {
-	color: #fff;
-	font-size: 20px;
-	font-family: 'Russo One', light;
-	letter-spacing: 2px;
-	text-align: center;
-	margin: auto;
-}
-
 /*---Адаптивность---*/
 @media (min-width: 900px) and (max-width: 1199.98px) {
 	.developers_block {
@@ -1358,9 +1159,8 @@ body.lock {
 	}
 	.developers_container {
 		width: 80%;
-		height: 60%;
-		margin-right: auto;
-		margin-top: 2%;
+		height: 90%;
+		margin: auto;
 	}
 	.dev_h2 {
 		font-size: calc(17px + 20 * (100vw / 1200));
@@ -1374,9 +1174,8 @@ body.lock {
 	}
 	.developers_container {
 		width: 80%;
-		height: 60%;
-		margin-right: auto;
-		margin-top: 2%;
+		height: 90%;
+		margin: auto;
 	}
 	.dev_h2 {
 		font-size: calc(17px + 20 * (100vw / 1200));
@@ -1393,13 +1192,13 @@ body.lock {
 
 @media (min-width: 400px) and (max-width: 599.98px) {
 	.developers_block {
-		height: 80vw;
+		height: 130vw;
 		border-radius: 30px 0 0 0;
 	}
 	.developers_container {
 		width: 80%;
-		height: 70%;
-		margin-top: 8%;
+		height: 90%;
+		margin: auto;
 	}
 	.dev_h2 {
 		font-size: calc(12px + 10 * (100vw / 600));
@@ -1416,12 +1215,12 @@ body.lock {
 
 @media (min-width: 330px) and (max-width: 399.98px) {
 	.developers_block {
-		height: 90vw;
+		height: 130vw;
 		border-radius: 30px 0 0 0;
 	}
 	.developers_container {
 		width: 80%;
-		height: 75%;
+		height: 90%;
 		margin-top: 5%;
 	}
 	.dev_h2 {
@@ -1439,12 +1238,12 @@ body.lock {
 
 @media (max-width: 329.98px) {
 	.developers_block {
-		height: 90vw;
+		height: 140vw;
 		border-radius: 30px 0 0 0;
 	}
 	.developers_container {
 		width: 80%;
-		height: 75%;
+		height: 90%;
 		margin-top: 5%;
 	}
 	.dev_h2 {
@@ -1471,24 +1270,8 @@ body.lock {
 	.dev_h2 {
 		font-size: 47px;
 	}
-	.dev_button {
-		width: 320px;
-		height: 80px;
-	}
-	.dev_button_text {
-		font-size: 30px;
-	}
 }
 
-@media (min-width: 2999.98px) {
-	.dev_button {
-		width: 430px;
-		height: 110px;
-	}
-	.dev_button_text {
-		font-size: 35px;
-	}
-}
 
 
 

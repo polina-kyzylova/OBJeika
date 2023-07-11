@@ -12,7 +12,6 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Rubik:wght@300;400&family=Russo+One&family=Squada+One&display=swap" rel="stylesheet">
 
-		<!--Слайдер-->
 		<link rel="stylesheet" href="css/itc-slider.css">
 		<script src="js/itc-slider.js" defer></script>
 	</head>
@@ -45,34 +44,16 @@
 					</div>
 				</div>
 
-				<div class="itc-slider" data-slider="itc-slider" data-autoplay="true">
-					<div class="itc-slider-wrapper">
-						<div class="itc-slider-items">
-							<div class="itc-slider-item">
-							    <img src="img/OBJeika_icon.png" class="slider_first_icon">
-							    <img src="img/OBJeika.png" class="slider_obj">
-							</div>
-							<div class="itc-slider-item">
-							     <img src="img/OBJeika_second_item.png" class="slider_sec_icon">
-							    <h3 class="slider_sec_text">Работаем<br>над этим</h3>
-							</div>
-						</div>
-					</div>
-
-					<button class="itc-slider-btn itc-slider-btn-prev"></button>
-					<button class="itc-slider-btn itc-slider-btn-next"></button>
-				</div>
-
 				<div class="burger_links">
 					<div class="burger_links_container">
 						<div class="li_link">
 							<img src="img/GP_logo.png" class="burger_gp_logo" width="10%" height="10%">
-							<a href="#" class="burger_gp_text">Google Play</a>
+							<a href="#" id="f_link_text" class="burger_gp_text">Google Play</a>
 						</div>
 
 						<div class="li_link">
 							<img src="img/VK_logo.png" class="burger_vk_logo" width="10%" height="10%">
-							<a href="https://vk.com/objeika" target="_ blank" class="burger_vk_text">Вконтакте</a>
+							<a href="https://vk.com/objeika" id="f_link_text" target="_ blank" class="burger_vk_text">Вконтакте</a>
 						</div>
 					</div>
 				</div>
@@ -126,12 +107,6 @@
 							<p class="adv_text">Система наград и поощрений, которые подтверждают успешность пройденного материала</p>
 						</div>
 					</div>
-
-					<div class="adv_button">
-						<div class="adv_start_button">
-							<p class="adv_btn_text">Начать!</p>
-						</div>
-					</div>
 				</div>
 			</div>
 
@@ -139,10 +114,39 @@
 			<div class="developers_block">
 				<div class="developers_container">
 					<h2 class="dev_h2">
-						О нас
+						Наши приложения
 					</h2>
-					<div class="dev_button" onclick="">
-						<a href="#" class="dev_button_text">Подробнее</a>
+
+					<div class="itc-slider" data-slider="itc-slider" data-autoplay="true">
+						<div class="itc-slider-wrapper">
+							<div class="itc-slider-items">
+								<div class="itc-slider-item">
+								    <img src="img/OBJeika_icon.png" class="slider_first_icon">
+								    <img src="img/OBJeika.png" class="slider_obj">
+
+
+								    <div class="slider_icons">
+										<div class="slider_gp">
+											<img src="img/GP_logo.png" class="footer_vk_logo" width="25%" height="25%">
+											<a href="#" class="slider_text">Доступно в<br/>Google Play</a>
+										</div>
+
+										<div class="slider_vk">
+											<img src="img/VK_logo.png" class="footer_vk_logo" width="25%" height="25%">
+											<a href="https://vk.com/objeika" target="_ blank" class="slider_text">Сообщество<br/>Вконтакте</a>
+										</div>
+									</div>
+
+								</div>
+								<div class="itc-slider-item">
+								     <img src="img/OBJeika_second_item.png" class="slider_sec_icon">
+								    <h3 class="slider_sec_text">Работаем<br>над этим</h3>
+								</div>
+							</div>
+						</div>
+
+						<button class="itc-slider-btn itc-slider-btn-prev"></button>
+						<button class="itc-slider-btn itc-slider-btn-next"></button>
 					</div>
 				</div>
 			</div>
@@ -168,12 +172,12 @@
 				<div class="footer_icons">
 					<div class="footer_gp" onclick="">
 						<img src="img/GP_logo.png" class="footer_vk_logo" width="25%" height="25%" onclick="">
-						<a href="#" class="footer_gp_text">Доступно в<br/>Google Play</a>
+						<a href="#" id="link" class="footer_gp_text">Доступно в<br/>Google Play</a>
 					</div>
 
 					<div class="footer_vk">
 						<img src="img/VK_logo.png" class="footer_vk_logo" width="25%" height="25%">
-						<a href="https://vk.com/objeika" target="_ blank" class="footer_vk_text">Сообщество<br/>Вконтакте</a>
+						<a href="https://vk.com/objeika" id="link" target="_ blank" class="footer_vk_text">Сообщество<br/>Вконтакте</a>
 					</div>
 				</div>
 			</div>
