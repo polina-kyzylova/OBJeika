@@ -7,6 +7,10 @@
  * @tutorial https://itchief.ru/javascript/slider
  */
 
+#slider_link {
+  color: #000;
+}
+
 .itc-slider {
   position: relative;
   height: 90%;
