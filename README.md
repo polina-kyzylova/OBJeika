@@ -12,6 +12,10 @@ For the purpose of facilitating the monitoring of children's progress in the gam
   <li>Access to a community of other game players where thoughts, ideas, and experiences can be shared</li>
 </ul>
 
+<p>The website is available at the link:<br />
+  https://polina-kyzylova.github.io/OBJeika/
+</p>
+
 # Project presentation
 <p>You can find more information about the project at the following link:<br />
   https://www.behance.net/gallery/176569975/Web-design-for-a-childrens-app
